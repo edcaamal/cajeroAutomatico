@@ -1,6 +1,10 @@
 package models;
 
+import java.util.ArrayList;
+
 public class Cliente {
+    public static ArrayList<Cliente> clientes = new ArrayList<>();
+    
     private String nombre;
     private String numeroCuenta;
     private Double saldo;
