@@ -49,7 +49,19 @@ public class Cliente {
     
     public static void ingresarSaldo(int recNo, Double importe){
         Double saldoActual = clientes.get(recNo).getSaldo();
-        clientes.get(recNo).setSaldo(importe+saldoActual);
+        clientes.get(recNo).setSaldo(saldoActual+importe);
+    }
+
+    public static String retirarSaldo(int recNo, Double importe){
+        String mensaje = ""; 
+        Double saldoActual = clientes.get(recNo).getSaldo();
+        if (saldoActual >= importe){
+            clientes.get(recNo).setSaldo(saldoActual- importe);
+            mensaje = "Operacion exitosa";
+        } else{
+            mensaje = "No cuenta con fondos suficiente ";
+        }
+        return mensaje;
     }
     
 }

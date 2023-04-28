@@ -2,7 +2,7 @@ package caheroautomatico;
 
 import models.Cliente;
 import static models.Cliente.clientes;
-import static models.Cliente.ingresarSaldo;
+import static models.Cliente.*;
 
 public class CaheroAutomatico {
 
@@ -15,6 +15,12 @@ public class CaheroAutomatico {
         ingresarSaldo(1, 100.00);
         System.out.println(clientes);
         ingresarSaldo(1, 70.00);
+        System.out.println(clientes);
+
+        System.out.println(retirarSaldo(1, 150.00));
+        System.out.println(clientes);
+
+        System.out.println(retirarSaldo(1, 50.00));
         System.out.println(clientes);
         
     }
